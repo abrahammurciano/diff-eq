@@ -1,0 +1,50 @@
+% To submit: 1, 3, 5
+% Author: Abraham Murciano
+
+Given a differential equation and a function \(y(x)\), we are to check that \(y\) is a solution to the differential equation.
+\begin{enumerate}
+	\item[\textbf{1.}]
+		For the following differential equation and function \(y(x)\),
+		\[
+			\dydx = 3y, \qquad y = 4e^{3x}
+		\]
+
+		Since we have \(y\), it can be differentiated to find \(\dydx\), then verify that it in fact is equal to \(3y\).
+		\[
+			\dydx = 12e^{3x} = 3 \cdot 4e^{3x} = 3y
+		\]
+
+	\item[\textbf{3.}]
+		For the following differential equation and function \(y(x)\),
+		\[
+			\ddydxx + 16y = 0, \qquad y = \sin(4x)
+		\]
+
+		This time we must differentiate \(y\) twice to find \(\ddydxx\).
+		\[
+			\dydx = 4\cos(4x) \Rightarrow \ddydxx = -16\sin(4x)
+		\]
+
+		Now we can substitute this back into the original equation, and it quite obviously satisfies it.
+		\[
+			-16\sin(4x) + 16\sin(4x) = 0
+		\]
+
+	\item[\textbf{5.}]
+		For the following differential equation and function \(y(x)\),
+		\[
+			\dydx + 2xy = 1, \qquad y = e^{-x^2} \int_0^x e^{t^2} dt + ce^{-x^2}
+		\]
+		we must find \(\dydx\).
+		\begin{align*}
+			\dydx & = e^{-x^2}e^{x^2} - 2xe^{-x^2} \int_0^x e^{t^2} dt - 2cxe^{-x^2} \\
+			      & = e^0 - 2x \left(e^{-x^2} \int_0^x e^{t^2} dt + ce^{-x^2}\right) \\
+			      & = 1 - 2xy
+		\end{align*}
+
+		Now we can substitute this into the original differential equation, and we see that is in fact satisfies it.
+		\[
+			\dydx + 2xy = 1 - 2xy + 2xy = 1
+		\]
+
+\end{enumerate}
