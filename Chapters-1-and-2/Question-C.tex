@@ -1,10 +1,52 @@
 % To submit: 1, 4
+% Author: Jonah Laurence
 
+We are to solve the following differential equations, finding a general solution and a particular solution with the given initial condition. (Note that the right-hand side depends on \(x\) only.)
 \begin{enumerate}
 	\item[\textbf{1.}]
+		We are given this equation and initial condition.
+		\[\dydx = 3x^2 + 5, \qquad y(1) = 1\]
 
+		Now we can integrate \(\dydx\) to obtain \(y\).
+		\[
+			\int \dydx dx = \int (3x^2 + 5) dx
+		\]
+
+		The general solution is
+		\[
+			y(x) = x^3 + 5x + c
+		\]
+
+		Now we can substitute our initial condition
+		\[
+			y(1) = 1^3 + 5(1) + c = 1\ \Rightarrow\ c = -5
+		\]
+
+		The particular solution is
+		\[
+			y(x) = x^3 + 5x - 5 \\
+		\]
 
 	\item[\textbf{4.}]
+		We are given this equation and initial condition.
+		\[\dydx = \ln \left| x-1 \right|, \hspace{1em} y(0) = 1\]
+		Now we can integrate \(\dydx\) to obtain \(y\).
+		\[
+			\int \dydx dx = \int (\ln \left| x-1 \right|) dx
+		\]
+		The general solution is
+		\[
+			y(x) = (x-1) \ln \left| x-1 \right| - x + c
+		\]
 
+		Now we can substitute our initial condition
+		\[
+			y(0) = (-1) \ln \left| -1 \right| + c = 1\ \Rightarrow\ c = 1
+		\]
+
+		The particular solution is
+		\[
+			y(x) = (x-1) \ln \left| x-1 \right| - x + 1
+		\]
 
 \end{enumerate}

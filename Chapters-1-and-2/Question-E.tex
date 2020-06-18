@@ -1,8 +1,28 @@
 % To submit: 3, 5, 7, 9
+% Author: Jonah Laurence
 
+We must solve the following differential equations, using the method of integration-factor.
 \begin{enumerate}
 	\item[\textbf{3.}]
+		\(y'(x) + \left[\frac{1}{x}+1\right]y = e^x\).
+		\begin{gather*}
+			y'(x) + \left[\frac{1}{x}+1\right]y = e^x\\
+			\alpha (x) = \exp\left[\int \frac{1}{x}+1dx\right]
+			= \exp\left[\ln x + x\right] = x e^x
+		\end{gather*}
 
+		Multiply both sides by the integrating factor, \(\alpha (x)\).
+		\[(x e^x) y' + (x e^x) y \left[\frac{1}{x}+1\right] = (x e^x) e^x\]
+
+		Integrate both sides with respect to \(x\).
+		\[(x e^x) y = \int (x e^{2x})dx\]
+
+		Integrate the right hand side using integration by parts. Let \(u = x, v' = e^{2x}\ \Rightarrow\ u' = 1, v = \frac{e^{2x}}{2}\).
+		\begin{gather*}
+			(x e^x) y = \frac{xe^{2x}}{2} - \int 1 \frac{e^{2x}}{2}dx\\
+			(x e^x) y = \frac{xe^{2x}}{2} - \frac{e^{2x}}{4} + c\\
+			y = \frac{e^x}{2} - \frac{e^{x}}{4x} + \frac{c}{x e^x}
+		\end{gather*}
 
 	\item[\textbf{5.}]
 

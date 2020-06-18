@@ -1,13 +1,61 @@
 % To submit: 3, 6, 9
+% Author: Jonah Laurence
 
+We are to solve the following differential equations by separation of variables.
 \begin{enumerate}
 	\item[\textbf{3.}]
+		We are given this differential equation.
+		\[(y-3)\dydx = \frac{4y}{x}\]
+		After rearranging and integrating we obtain the following.
+		\begin{gather*}
+			\frac{(y-3)\dydx}{y} = \frac{4}{x}\\
+			\dydx - \frac{3\dydx}{y} = \frac{4}{x}\\
+			\int \dydx - \frac{3\dydx}{y} dx = \int \frac{4}{x} dx\\
+		\end{gather*}
 
+		From integration by substitution,
+		\begin{gather*}
+			\int 1 - \frac{3}{y} dy = \int \frac{4}{x} dx\\
+			y - 3 \ln y = 4 \ln x + c\\
+			\frac{y}{4} - \ln y^{\frac{3}{4}} = \ln x + c\\
+			\ln x + \ln y^{\frac{3}{4}} = \frac{y}{4} - c\\
+			\ln xy^{\frac{3}{4}} = \frac{y}{4} - c\\
+			xy^{\frac{3}{4}}  = e^{\frac{y}{4} - c}
+		\end{gather*}
+		Let \(\tilde{c} \equiv \frac{1}{e^c}\).
+		\[xy^{\frac{3}{4}} = \tilde{c} e^{\frac{y}{4}}\]
 
 	\item[\textbf{6.}]
+		We are given this differential equation.
+		\[\cos^2 (x) y'(x) = y + 3\]
 
+		Now we rearrange and integrate to obtain the following.
+		\begin{gather*}
+			\frac{y'(x)}{y+3} = \frac{1}{\cos^2 x}\\
+			\int \frac{y'(x)}{y+3} dx = \int \frac{1}{\cos^2 x} dx\\
+			\int \frac{1}{y+3} dy = \tan x + c\\
+			\ln \vert y+3 \vert = \tan x + c\\
+			y + 3 = e^{\tan x + c}
+		\end{gather*}
+
+		Let \(\tilde{c} \equiv e^c\). Finally we have
+		\[y = \tilde{c} e^{\tan x} - 3\]
 
 	\item[\textbf{9.}]
+		We are given this differential equation.
+		\[y'(x) = 3x^2 (y+2)\]
 
+		After rearranging and integrating we obtain the following.
+		\begin{gather}
+			y' = 3x^2 (y+2)\\
+			\frac{y'}{y+2} = 3x^2\\
+			\int \frac{y'}{y+2}\ dx = \int 3x^2\ dx\\
+			\int \frac{1}{y+2}\ dy = x^3 + c\\
+			\ln \vert y+2 \vert = x^3 + c\\
+			y + 2 = e^{x^3 + c}
+		\end{gather}
+
+		Let \(\tilde{c} \equiv e^c\). Now we have
+		\[y = \tilde{c} e^{x^3} - 2\]
 
 \end{enumerate}
